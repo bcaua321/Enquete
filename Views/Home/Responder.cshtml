@@ -1,0 +1,47 @@
+@model Enquete.Models.Resposta;
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <div class="field">
+                <label class="label" for="txtNome">Nome: </label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Nome" name="Nome" id="txtNome">
+                </div>
+                <p class="help">This is a help text</p>
+            </div>
+            <div class="field">
+                <label class="label" for="txtEmail">Email: </label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="email@example.com" name="Email" id="txtNome">
+                </div>
+                <p class="help">This is a help text</p>
+            </div>
+
+            <div class="control">
+                <label class="radio" for="rdSim">
+                    <input type="radio" id="rdSim" name="Alternativa" value="true" required>
+                    Yes
+                </label>
+                <label class="radio" for="rdNao">
+                    <input type="radio" id="rdNao" name="Alternativa" value="false" required>
+                    No
+                </label>
+            </div>
+
+            <div class="field">
+                <input type="submit" class="button is-primary" value="Enviar Resposta">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
